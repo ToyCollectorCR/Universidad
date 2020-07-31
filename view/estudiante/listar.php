@@ -14,16 +14,20 @@
                 </tr>
             </thead>
             <tbody>
+                <?php foreach($estudiantes as $estudiante): ?>
                     <tr>
-                        <th>123</th>
-                        <th>Ana</th>
-                        <th>Torres</th>
-                        <th>25</th>
+                        <th><?=$estudiante->getCedula();?></th>
+                        <th><?=$estudiante->getNombre();?></th>
+                        <th><?=$estudiante->getApellido();?></th>
+                        <th><?=$estudiante->getEdad();?></th>
+                       
                         <th>
                             <a href="#" class="btn btn-primary">Editar</a>
                             <a href="#" class="btn btn-danger">Eliminar</a>
                         </th>
+                        
                     </tr>
+                <?php endforeach; ?>
             </tbody>
         </table>
     </div>    
